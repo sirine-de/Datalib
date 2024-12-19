@@ -25,6 +25,7 @@ def main():
     Returns:
         None: Cette fonction ne retourne rien mais affiche les résultats et les graphiques.
     """
+    print('WELCOME!!')
     # Charger le dataset depuis le fichier CSV en utilisant la fonction read_csv
     file_path = 'enhanced_fever_medicine_recommendation.csv'  # Chemin vers votre fichier CSV
     loaded_data = read_csv(file_path)
