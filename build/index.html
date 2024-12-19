@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to the DataLib documentation! &#8212; DataLib 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=01f34227"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="welcome-to-the-datalib-documentation">
+<h1>Welcome to the DataLib documentation!<a class="headerlink" href="#welcome-to-the-datalib-documentation" title="Link to this heading">¶</a></h1>
+<p>DataLib is a Python library designed for data manipulation and analysis.</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Data manipulation</strong>: Load, clean, and transform data.</p></li>
+<li><p><strong>Statistics</strong>: Calculate basic statistics (mean, median, standard deviation) and perform statistical tests.</p></li>
+<li><p><strong>Visualization</strong>: Simple and advanced data visualizations.</p></li>
+<li><p><strong>Advanced analysis</strong>: Linear regression, clustering, and principal component analysis (PCA).</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Link to this heading">¶</a></h2>
+<p>This section includes the documentation for all modules in DataLib.</p>
+</section>
+<section id="manipulation-module">
+<h2><strong>Manipulation Module</strong><a class="headerlink" href="#manipulation-module" title="Link to this heading">¶</a></h2>
+<dl class="py function" id="module-datalib.manipulation">
+<dt class="sig sig-object py" id="datalib.manipulation.fill_missing_values">
+<span class="sig-prename descclassname"><span class="pre">datalib.manipulation.</span></span><span class="sig-name descname"><span class="pre">fill_missing_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/manipulation.html#fill_missing_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.manipulation.fill_missing_values" title="Link to this definition">¶</a></dt>
+<dd><p>Remplit les valeurs manquantes d’un DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – Le DataFrame contenant les valeurs manquantes.</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – La méthode utilisée pour remplir les valeurs manquantes. Peut être “mean”, “median”, ou “mode”.
+La valeur par défaut est “mean”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le DataFrame avec les valeurs manquantes remplies.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si la méthode spécifiée n’est pas supportée.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.manipulation.read_csv">
+<span class="sig-prename descclassname"><span class="pre">datalib.manipulation.</span></span><span class="sig-name descname"><span class="pre">read_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/manipulation.html#read_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.manipulation.read_csv" title="Link to this definition">¶</a></dt>
+<dd><p>Lit un fichier CSV et retourne un DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – Le chemin du fichier CSV à lire.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le contenu du fichier CSV sous forme de DataFrame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si une erreur se produit lors de la lecture du fichier.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.manipulation.write_csv">
+<span class="sig-prename descclassname"><span class="pre">datalib.manipulation.</span></span><span class="sig-name descname"><span class="pre">write_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/manipulation.html#write_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.manipulation.write_csv" title="Link to this definition">¶</a></dt>
+<dd><p>Écrit un DataFrame dans un fichier CSV.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – Le DataFrame à écrire dans le fichier.</p></li>
+<li><p><strong>file_path</strong> (<em>str</em>) – Le chemin où enregistrer le fichier CSV.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si une erreur se produit lors de l’écriture du fichier.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-datalib.data_statistics">
+<span id="data-statistics-module"></span><h2><strong>Data Statistics Module</strong><a class="headerlink" href="#module-datalib.data_statistics" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.data_statistics.calculate_correlation">
+<span class="sig-prename descclassname"><span class="pre">datalib.data_statistics.</span></span><span class="sig-name descname"><span class="pre">calculate_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/data_statistics.html#calculate_correlation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.data_statistics.calculate_correlation" title="Link to this definition">¶</a></dt>
+<dd><p>Calcule la corrélation entre deux séries de données.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data1</strong> (<em>array-like</em>) – La première série de données.</p></li>
+<li><p><strong>data2</strong> (<em>array-like</em>) – La deuxième série de données.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>La corrélation entre les deux séries de données.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.data_statistics.calculate_mean">
+<span class="sig-prename descclassname"><span class="pre">datalib.data_statistics.</span></span><span class="sig-name descname"><span class="pre">calculate_mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/data_statistics.html#calculate_mean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.data_statistics.calculate_mean" title="Link to this definition">¶</a></dt>
+<dd><p>Calcule la moyenne des données.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>array-like</em>) – Les données dont la moyenne doit être calculée.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>La moyenne des données.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.data_statistics.calculate_median">
+<span class="sig-prename descclassname"><span class="pre">datalib.data_statistics.</span></span><span class="sig-name descname"><span class="pre">calculate_median</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/data_statistics.html#calculate_median"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.data_statistics.calculate_median" title="Link to this definition">¶</a></dt>
+<dd><p>Calcule la médiane des données.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>array-like</em>) – Les données dont la médiane doit être calculée.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>La médiane des données.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.data_statistics.calculate_mode">
+<span class="sig-prename descclassname"><span class="pre">datalib.data_statistics.</span></span><span class="sig-name descname"><span class="pre">calculate_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/data_statistics.html#calculate_mode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.data_statistics.calculate_mode" title="Link to this definition">¶</a></dt>
+<dd><p>Calcule le mode des données.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>array-like</em>) – Les données dont le mode doit être calculé.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le mode des données, ou None si aucun mode n’est trouvé.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.data_statistics.calculate_statistics">
+<span class="sig-prename descclassname"><span class="pre">datalib.data_statistics.</span></span><span class="sig-name descname"><span class="pre">calculate_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/data_statistics.html#calculate_statistics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.data_statistics.calculate_statistics" title="Link to this definition">¶</a></dt>
+<dd><p>Calcule automatiquement les statistiques pour toutes les colonnes numériques d’un DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dataframe</strong> (<em>pandas.DataFrame</em>) – Le DataFrame contenant les données à analyser.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Affiche les statistiques pour chaque colonne numérique du DataFrame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.data_statistics.calculate_std">
+<span class="sig-prename descclassname"><span class="pre">datalib.data_statistics.</span></span><span class="sig-name descname"><span class="pre">calculate_std</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/data_statistics.html#calculate_std"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.data_statistics.calculate_std" title="Link to this definition">¶</a></dt>
+<dd><p>Calcule l’écart-type des données.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>array-like</em>) – Les données dont l’écart-type doit être calculé.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>L’écart-type des données.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-datalib.visualization">
+<span id="visualization-module"></span><h2><strong>Visualization Module</strong><a class="headerlink" href="#module-datalib.visualization" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.visualization.plot_correlation_matrix">
+<span class="sig-prename descclassname"><span class="pre">datalib.visualization.</span></span><span class="sig-name descname"><span class="pre">plot_correlation_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/visualization.html#plot_correlation_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.visualization.plot_correlation_matrix" title="Link to this definition">¶</a></dt>
+<dd><p>Affiche une matrice de corrélation pour les colonnes numériques d’un DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dataframe</strong> (<em>pandas.DataFrame</em>) – DataFrame contenant les données.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.visualization.plot_histogram">
+<span class="sig-prename descclassname"><span class="pre">datalib.visualization.</span></span><span class="sig-name descname"><span class="pre">plot_histogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Histogramme'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/visualization.html#plot_histogram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.visualization.plot_histogram" title="Link to this definition">¶</a></dt>
+<dd><p>Trace un histogramme des données.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>array-like</em>) – Série de données à représenter.</p></li>
+<li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – Titre du graphique. Par défaut “Histogramme”.</p></li>
+<li><p><strong>bins</strong> (<em>int</em><em>, </em><em>optional</em>) – Nombre de classes (bins) dans l’histogramme. Par défaut 10.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.visualization.plot_scatter">
+<span class="sig-prename descclassname"><span class="pre">datalib.visualization.</span></span><span class="sig-name descname"><span class="pre">plot_scatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Nuage</span> <span class="pre">de</span> <span class="pre">points'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/visualization.html#plot_scatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.visualization.plot_scatter" title="Link to this definition">¶</a></dt>
+<dd><p>Trace un nuage de points entre deux séries de données.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) – Série de données pour l’axe des abscisses.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em>) – Série de données pour l’axe des ordonnées.</p></li>
+<li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – Titre du graphique. Par défaut “Nuage de points”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-datalib.analysis">
+<span id="analysis-module"></span><h2><strong>Analysis Module</strong><a class="headerlink" href="#module-datalib.analysis" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.analysis.decision_tree_classification">
+<span class="sig-prename descclassname"><span class="pre">datalib.analysis.</span></span><span class="sig-name descname"><span class="pre">decision_tree_classification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/analysis.html#decision_tree_classification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.analysis.decision_tree_classification" title="Link to this definition">¶</a></dt>
+<dd><p>Applique un classificateur arbre de décision sur les données d’entraînement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_train</strong> (<em>array-like</em>) – Les caractéristiques d’entraînement.</p></li>
+<li><p><strong>y_train</strong> (<em>array-like</em>) – Les cibles d’entraînement.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le modèle d’arbre de décision ajusté.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DecisionTreeClassifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.analysis.kmeans_clustering">
+<span class="sig-prename descclassname"><span class="pre">datalib.analysis.</span></span><span class="sig-name descname"><span class="pre">kmeans_clustering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/analysis.html#kmeans_clustering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.analysis.kmeans_clustering" title="Link to this definition">¶</a></dt>
+<dd><p>Applique l’algorithme de clustering k-means sur les données fournies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em>) – Les données à regrouper.</p></li>
+<li><p><strong>n_clusters</strong> (<em>int</em><em>, </em><em>optional</em>) – Le nombre de clusters à générer. Par défaut 3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le modèle de clustering k-means ajusté.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>KMeans</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.analysis.knn_classification">
+<span class="sig-prename descclassname"><span class="pre">datalib.analysis.</span></span><span class="sig-name descname"><span class="pre">knn_classification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/analysis.html#knn_classification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.analysis.knn_classification" title="Link to this definition">¶</a></dt>
+<dd><p>Applique un classificateur k-plus proches voisins (k-NN) sur les données d’entraînement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_train</strong> (<em>array-like</em>) – Les caractéristiques d’entraînement.</p></li>
+<li><p><strong>y_train</strong> (<em>array-like</em>) – Les cibles d’entraînement.</p></li>
+<li><p><strong>n_neighbors</strong> (<em>int</em><em>, </em><em>optional</em>) – Le nombre de voisins à considérer pour la classification. Par défaut 5.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le modèle k-NN ajusté.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>KNeighborsClassifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.analysis.linear_regression">
+<span class="sig-prename descclassname"><span class="pre">datalib.analysis.</span></span><span class="sig-name descname"><span class="pre">linear_regression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/analysis.html#linear_regression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.analysis.linear_regression" title="Link to this definition">¶</a></dt>
+<dd><p>Applique une régression linéaire sur les données fournies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em>) – Les caractéristiques d’entrée.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em>) – Les cibles à prédire.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le modèle de régression linéaire ajusté.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>LinearRegression</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.analysis.pca_analysis">
+<span class="sig-prename descclassname"><span class="pre">datalib.analysis.</span></span><span class="sig-name descname"><span class="pre">pca_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/analysis.html#pca_analysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.analysis.pca_analysis" title="Link to this definition">¶</a></dt>
+<dd><p>Applique une analyse en composantes principales (PCA) sur les données.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em>) – Les données à transformer.</p></li>
+<li><p><strong>n_components</strong> (<em>int</em><em>, </em><em>optional</em>) – Le nombre de composantes principales. Par défaut 2.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le modèle PCA ajusté et les données transformées.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="datalib.analysis.polynomial_regression">
+<span class="sig-prename descclassname"><span class="pre">datalib.analysis.</span></span><span class="sig-name descname"><span class="pre">polynomial_regression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/datalib/analysis.html#polynomial_regression"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#datalib.analysis.polynomial_regression" title="Link to this definition">¶</a></dt>
+<dd><p>Applique une régression polynomiale sur les données fournies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array-like</em>) – Les caractéristiques d’entrée.</p></li>
+<li><p><strong>y</strong> (<em>array-like</em>) – Les cibles à prédire.</p></li>
+<li><p><strong>degree</strong> (<em>int</em><em>, </em><em>optional</em>) – Le degré du polynôme. Par défaut 2.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le modèle de régression polynomiale et l’instance de PolynomialFeatures.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">DataLib</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, sirine.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
