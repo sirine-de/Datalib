@@ -31,13 +31,13 @@ DataLib est une bibliothèque Python dédiée à la manipulation, l'analyse et l
 DataLib peut être installé facilement via `pip` :
 
 ```bash
-pip install datalib
+pip install my-datalib-sirine
 
 Ou via Poetry :
 
 .. code-block:: bash
 
-   poetry add datalib
+   poetry add my-datalib-sirine
 ```
 
 ## Utilisation

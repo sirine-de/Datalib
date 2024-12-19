@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "datalib"
+name = "my-datalib-sirine"
 version = "0.1.0"
 description = ""
 authors = ["sirine-de <sirine.pfe22@gmail.com>"]
