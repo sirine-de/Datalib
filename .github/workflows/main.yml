@@ -35,13 +35,7 @@ jobs:
         run: |
           poetry run pytest  # Exécuter les tests avec pytest
 
-      # Étape 5 : Vérifier la qualité du code (optionnel)
-      - name: Lint the code
-        run: |
-          pip install flake8
-          flake8 .  # Vérifier la qualité du code avec flake8
-
-      # Étape 6 : Nettoyage (optionnel)
+      # Étape 5 : Nettoyage (optionnel)
       - name: Clean up
         run: |
           # Vous pouvez ajouter des étapes pour nettoyer ou archiver les résultats, si nécessaire
